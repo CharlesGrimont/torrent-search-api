@@ -4,3 +4,5 @@ package-lock.json
 coverage
 test-results
 test.js
+dist/
+credentials.json

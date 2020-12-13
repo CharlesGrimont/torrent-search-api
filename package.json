@@ -2,8 +2,9 @@
   "name": "torrent-search-api",
   "version": "2.1.3",
   "description": "Yet another node torrent scraper based on x-ray. (Support iptorrents, torrentleech, torrent9, Yyggtorrent, ThePiratebay, torrentz2, 1337x, KickassTorrent, Rarbg, TorrentProject, Yts, Limetorrents, Eztv)",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
+    "start": "tsc && node dist/app.js",
     "test": "jest",
     "test:watch": "jest watch",
     "lint": "eslint ."
@@ -35,11 +36,14 @@
     "url": "git://github.com/JimmyLaurent/torrent-search-api.git"
   },
   "dependencies": {
+    "express": "4.17.1",
     "cloudscraper": "^4.6.0",
+    "cloudflare-scraper": "1.0.7",
     "lodash": "^4.17.15",
     "request": "^2.88.2",
     "string-format": "^0.5.0",
-    "x-ray-scraper": "^3.0.5"
+    "x-ray-scraper": "^3.0.5",
+    "puppeteer": "5.5.0"
   },
   "devDependencies": {
     "@types/jest": "^22.1.3",
@@ -51,7 +55,8 @@
     "jest-junit": "^3.6.0",
     "lint-staged": "^6.1.1",
     "nock": "^9.1.6",
-    "prettier": "^1.10.2"
+    "prettier": "^1.10.2",
+    "typescript": "^4.1.2"
   },
   "jest": {
     "testResultsProcessor": "jest-junit",
